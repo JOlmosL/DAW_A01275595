@@ -1,14 +1,427 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Lab 1</title>
-</head>
+<header>
+	<center><strong><h1>Laboratorio 1</h1></strong></center>
+</header>
+<nav>
+	<center>Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</center>
+</nav>	
+
 <body>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<section>
+		<article>
+			<table border="1">
+                    <tfoot>
+                        <tr><td colspan="2"><strong>Información de Contacto:</strong><br>Nombre Completo: Jesús Olmos Larios<br>Matrícula: A01275595<br>Correo Institucional: A01275595@ITESM.MX</td></tr>
+                    </tfoot> 
+                                        
+                    <tbody>
+                        <tr>
+                            <th rowspan="2">
+                            	<h2>¿Quien soy?<br><br>Mi nombre es Jesús Olmos Larios, estudio en el Tecnológico de Monterrey, actualmente cursando mi quinto semestre en la carrera de ISC. Me gusta vivir sin expectativas y realizo mis elecciones en base a la opción de la cual no me vaya a arrepentir. Me encanta mi carrera y busco constantemente conocimiento relacionado a la misma de cualquier fuente que se me presente.</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><img src="image.jpeg" width="300"></td>
+                        </tr>
+                    </tbody>
+            </table>
+
+			<center>He colaborado en diferentes actividades y proyectos a lo largo de mi carrera estudiantil, por lo que si te interesara conocer más sobre mí, te dejo mi primer currículum: <a href="CV.png" download>J. Olmos CV</a></center>
+		</article>
+	
+		<article>
+			<center><h2>Notas de Investigación</h2></center>
+
+			<b>URL - </b>(Uniform Resource Locator) Es una dirección web que es usada para identificar recursos dentro de la Web. [1]<br>
+
+			<b>MIME - </b>Es una especificación para el formato de correos de archivos adjuntos sin texto que permiten que los archivos adjuntos sean enviados por la internet. MIME permite a tu navegador de internet enviar y recibir cosas como spreadsheets, audio, video y archivos de gráficos mediante el correo de la Internet. [2]<br>
+
+			<center><h3>Métodos y códigos de errores</h3></center>
+
+			<b><center>HTTP</center></b><br>
+			<strong>Métodos</strong>
+			<blockquote>
+				<dl><b>GET</b> – Solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos.</dl>
+				<dl><b>HEAD</b> - Pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.</dl>
+				<dl><b>POST</b> - Se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor.</dl>
+				<dl><b>PUT</b> - Reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.</dl>
+				<dl><b>DELETE</b> – Borra un recurso especifico.</dl>
+				<dl><b>CONNECT</b> - Establece un túnel hacia el servidor identificado por el recurso.</dl>
+				<dl><b>OPTIONS</b> - Es utilizado para describir las opciones de comunicación para el recurso de destino.</dl>
+				<dl><b>TRACE</b> - Realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta al recurso de destino.</dl>
+				<dl><b>PATCH</b> - Es utilizado para aplicar modificaciones parciales a un recurso.</dl>[3]
+			</blockquote>
+
+			<strong>Códigos de Errores</strong>
+			<blockquote>
+				<strong>Errores de Cliente</strong>
+				<li><b>400 Bad Request</b> - Esta respuesta significa que el servidor no pudo interpretar la solicitud dada una sintaxis inválida.</li>
+				<li><b>401 Unauthorized</b> - Es necesario autenticar para obtener la respuesta solicitada.</li>
+				<li><b>402 Payment Required</b> - Este código de respuesta está reservado para futuros usos.</li>
+				<li><b>403 Forbidden</b> - El cliente no posee los permisos necesarios para cierto contenido, por lo que el servidor está rechazando otorgar una respuesta apropiada.</li>
+				<li><b>404 Not Found</b> - El servidor no pudo encontrar el contenido solicitado.</li>
+				<li><b>405 Method Not Allowed</b> - El método solicitado es conocido por el servidor, pero ha sido deshabilitado y no puede ser utilizado.</li>
+				<li><b>406 Not Acceptable</b> - Esta respuesta es enviada cuando el servidor, después de aplicar una negociación de contenido servidor-impulsado, no encuentra ningún contenido seguido por el criterio dada por el usuario.</li>
+				<li><b>407 Proxy Authentication Required</b> - Similar al código 401, pero la autenticación debe estar hecha a partir de un proxy.</li>
+				<li><b>408 Request Timeout</b> - Significa que el servidor quiere desconectar esta conexión sin usar. </li>
+				<li><b>409 Conflict</b> - Puede ser enviada cuando una petición tiene conflicto con el estado actual del servidor.</li>
+				<li><b>410 Gone</b> - Esta respuesta puede ser enviada cuando el contenido solicitado ha sido borrado del servidor.</li>
+				<li><b>411 Length Required</b> - El servidor rechaza la petición porque el campo de encabezado Content-Length no está definido y el servidor lo requiere.</li>
+				<li><b>412 Precondition Failed</b> - El cliente ha indicado pre-condiciones en sus encabezados la cual el servidor no cumple.</li>
+				<li><b>413 Payload Too Large</b> - La entidad de petición es más larga que los limites definidos por el servidor; el servidor puede cerrar la conexión o retornar un campo de encabezado Retry-After.</li>
+				<li><b>414 URI Too Long</b> - La URI solicitada por el cliente es más larga que el servidor está dispuesto a interpretar.</li>
+				<li><b>415 Unsupported Media Type</b> - El formato multimedia de los datos solicitados no está soportada por el servidor, por lo cual el servidor rechaza la solicitud.</li>
+				<li><b>416 Requested Range Not Satisfiable</b> - El rango especificado por el campo de encabezado Range en la solicitud no cumple.</li>
+				<li><b>417 Expectation Failed</b> - Significa que la expectativa indicada por el campo de encabezado Expect solicitada no puede ser cumplida por el servidor.</li>
+				<li><b>418 I'm a teapot</b> - El servidor se rehúsa a intentar hacer café con una tetera.</li>
+				<li><b>421 Misdirected Request</b> - La petición fue dirigida a un servidor que no es capaz de producir una respuesta. </li>
+				<li><b>422 Unprocessable Entity (WebDAV)</b> - La petición estaba bien formada pero no se pudo seguir debido a errores de semántica.</li>
+				<li><b>423 Locked (WebDAV)</b> - El recurso que está siendo accedido está bloqueado.</li>
+				<li><b>424 Failed Dependency (WebDAV)</b> - La petición falló debido a una falla de una petición previa.</li>
+				<li><b>426 Upgrade Required</b> - El servidor se reúsa a aplicar la solicitud usando el protocolo actual pero puede estar dispuesto a hacerlo después que el cliente se actualize a un protocolo diferente.</li> 
+				<li><b>428 Precondition Required</b> - El servidor origen requiere que la solicitud sea condicional.</li> 
+				<li><b>429 Too Many Requests</b> - El usuario ha enviado demasiadas solicitudes en un periodo de tiempo dado.</li>
+				<li><b>431 Request Header Fields Too Large</b> - El servidor no está dispuesto a procesar la solicitud porque los campos de encabezado son demasiado largos.</li> 
+				<li><b>451 Unavailable For Legal Reasons</b> - El usuario solicita un recurso ilegal, como alguna página web censurada por algún gobierno.</li>[4]
+			</blockquote>
+
+			<blockquote>
+				<strong>Errores de Servidor</strong>
+				<li><b>500 Internal Server Error</b> - El servidor ha encontrado una situación que no sabe cómo manejarla.</li>
+				<li><b>501 Not Implemented</b> - El método solicitado no está soportado por el servidor y no puede ser manejada.</li>
+				<li><b>502 Bad Gateway</b> - Esta respuesta de error significa que el servidor, mientras trabaja como una puerta de enlace para obtener una respuesta necesaria para manejar la petición, obtuvo una respuesta inválida.</li>
+				<li><b>503 Service Unavailable</b> - El servidor no está listo para manejar la petición. </li>
+				<li><b>504 Gateway Timeout</b> - Esta respuesta de error es dada cuando el servidor está actuando como una puerta de enlace y no puede obtener una respuesta a tiempo.</li>
+				<li><b>505 HTTP Version Not Supported</b> - La versión de HTTP usada en la petición no está soportada por el servidor.</li>
+				<li><b>506 Variant Also Negotiates</b> - El servidor tiene un error de configuración interna: negociación de contenido transparente para la petición resulta en una referencia circular.</li>
+				<li><b>507 Insufficient Storage</b> - El servidor tiene un error de configuración interna: la variable de recurso escogida está configurada para acoplar la negociación de contenido transparente misma, y no es por lo tanto un punto final adecuado para el proceso de negociación.</li>
+				<li><b>508 Loop Detected (WebDAV)</b> - El servidor detectó un ciclo infinito mientras procesaba la solicitud.</li>
+				<li><b>510 Not Extended</b> - Extensiones adicionales para la solicitud son requeridas para que el servidor las cumpla.</li>
+				<li><b>511 Network Authentication Required</b> - El código de estado 511 indica que el cliente necesita auntenticar para ganar acceso a la red.</li>[4]
+			</blockquote>
+
+
+
+			<b><center>HTML5</center></b><br>
+			HTML5 (HyperText Markup Language, versión 5) es la quinta revisión del lenguaje HTML. Esta nueva versión (aún en desarrollo), y en conjunto con CSS3, define los nuevos estándares de desarrollo web, rediseñando el código para resolver problemas y actualizándolo así a nuevas necesidades.[5] Es un nuevo concepto para la construcción de sitios web y aplicaciones en una era que combina dispositivos móviles, computación en la nube y trabajos en red.[6]<br> 
+			<strong>Métodos</strong><br>
+			<blockquote>
+				<dl>Nuevas etiquetas semánticas para estructurar los documentos HTML, destinadas a remplazar la necesidad de tener una etiqueta < div > que identifique cada bloque de la página.</dl>
+				<dl>Los nuevos elementos multimedia como < audio > y < video >.</dl>
+				<dl>La integración de gráficos vectoriales escalables (SVG) en sustitución de los genéricos < object >, y un nuevo elemento < canvas > que nos permite dibujar en él.</dl>
+				<dl>El cambio, redefinición o estandarización de algunos elementos, como < a >, < cite > o < menu >.</dl>
+				<dl>MathML para fórmulas matemáticas.</dl>
+				<dl>Almacenamiento local en el lado del cliente.</dl>[5]
+			</blockquote>
+
+			<strong>Códigos de Errores</strong>
+		<blockquote>
+				<li><b>HTML1400</b> - Carácter inesperado al comienzo de la referencia de carácter numérico. Se esperaba [0-9].</li>
+				<li><b>HTML1401</b>	Carácter inesperado al comienzo de la referencia de carácter numérico hexadecimal. Se esperaba [0-9], [a-f] o [A-F].</li>
+				<li><b>HTML1402</b>	Falta un punto y coma final en la referencia de carácter ";".</li>
+				<li><b>HTML1403</b>	La referencia de carácter numérico no se resuelve en un carácter válido.</li>
+				<li><b>HTML1404</b>	Referencia de caracteres con nombre no reconocida.</li>
+				<li><b>HTML1405</b>	Carácter no válido: U+0000 NULL. No se deben usar caracteres nulos.</li>
+				<li><b>HTML1406</b>	Inicio de etiqueta no válido: <?. Los signos de interrogación no deben iniciar etiquetas.</li>
+				<li><b>HTML1407</b>	Nombre de etiqueta no válido. El primer carácter debe coincidir con [a-zA-Z].</li>
+				<li><b>HTML1408</b>	Etiqueta final no válida </>. Las etiquetas finales no pueden estar vacías.</li>
+				<li><b>HTML1409</b>	Carácter de nombre de atributo no válido. Los nombres de atributo no deben contener ("), ('), (<), o (=).</li>
+				<li><b>HTML1410</b>	Valor de atributo sin comillas no válido. Los nombres de atributo sin comillas no deben contener ("), ('), (<), (=) o (`).</li>
+				<li><b>HTML1411</b>	Fin de archivo inesperado.</li>
+				<li><b>HTML1412</b>	Comentario mal formado. Los comentarios deben empezar con < !-- >.</li>
+				<li><b>HTML1413</b>	Carácter inesperado: U+003E corchete angular de cierre (>).</li>
+				<li><b>HTML1414</b>	Carácter inesperado: U+0021 signo de exclamación (!).</li>
+				<li><b>HTML1415</b>	Carácter inesperado: U+002D signo menos (-).</li>
+				<li><b>HTML1416</b>	Carácter imprevisto en el final del comentario. Se esperaba "-->".</li>
+				<li><b>HTML1417</b>	DOCTYPE vacío. El doctype más corto posible es < !DOCTYPE html >.</li>
+				<li><b>HTML1418</b>	Carácter imprevisto en el final de DOCTYPE.</li>
+				<li><b>HTML1419</b>	Palabra clave inesperada en DOCTYPE. Se esperaba 'PUBLIC' o 'SYSTEM'.</li>
+				<li><b>HTML1420</b>	Comilla inesperada después de palabra clave "PUBLIC" o "SYSTEM". Se esperaba un espacio en blanco.</li>
+				<li><b>HTML1421</b>	Etiqueta final mal formada. Las etiquetas finales no deberían contener atributos.</li>
+				<li><b>HTML1422</b>	Etiqueta inicial mal formada. Una barra diagonal de autocierre debe ir seguida de un signo U+003E corchete angular de cierre (>).</li>
+				<li><b>HTML1423</b>	Etiqueta inicial mal formada. Los atributos se deben separar por espacios en blanco.</li>
+				<li><b>HTML1424</b>	Carácter no válido.</li>
+				<li><b>HTML1500</b>	No se puede cerrar la etiqueta automáticamente. Usa una etiqueta de cierre explícita.</li>
+				<li><b>HTML1501</b>	Fin de archivo inesperado.</li>
+				<li><b>HTML1502</b>	DOCTYPE inesperado. Solo se permite un DOCTYPE y este debe producirse antes de cualquier elemento.</li>
+				<li><b>HTML1503</b>	Etiqueta inicial inesperada.</li>
+				<li><b>HTML1504</b>	Etiqueta final inesperada.</li>
+				<li><b>HTML1505</b>	Token de carácter inesperado.</li>
+				<li><b>HTML1506</b>	Token inesperado.</li>
+				<li><b>HTML1507</b>	Carácter inesperado". U+0000 NULL. No se deben usar caracteres nulos.</li>
+				<li><b>HTML1508</b>	Etiqueta final no emparejada.</li>
+				<li><b>HTML1509</b>	Etiqueta final no emparejada.</li>
+				<li><b>HTML1510</b>	Nodos necesarios fuera de ámbito.</li>
+				<li><b>HTML1511</b>	Se encontró un elemento inesperado de nivel de encabezado fuera de < head >.</li>
+				<li><b>HTML1512</b>	Etiqueta final no emparejada.</li>
+				<li><b>HTML1513</b>	Etiqueta adicional de < html >. Solo debe haber una etiqueta < html > por documento.</li>
+				<li><b>HTML1514</b>	Se encontró una etiqueta adicional de < body >. Solo debe haber una etiqueta < body > por documento.</li>
+				<li><b>HTML1515</b>	Se encontró < frameset > situado demasiado abajo en el documento. Esta etiqueta debe ser anterior a la creación de < body >.</li>
+				<li><b>HTML1516</b>	Anidamiento no válido. Una etiqueta de encabezado como < h1 > o < h2 > no debe colocarse dentro de otra etiqueta de encabezado.</li>
+				<li><b>HTML1517</b>	Anidamiento no válido. Una etiqueta < form > no se puede colocar dentro de otra etiqueta.</li>
+				<li><b>HTML1518</b>	Anidamiento no válido. Una etiqueta < button > no se puede colocar dentro de otra etiqueta.</li>
+				<li><b>HTML1519</b>	Anidamiento no válido. Una etiqueta < a > no se puede colocar dentro de otra etiqueta < a >.</li>
+				<li><b>HTML1520</b>	Etiqueta inicial imprevista: el elemento < isindex > está en desuso y no se debe usar.</li>
+				<li><b>HTML1521</b>	< /body > o fin de archivo inesperados. Todos los elementos abiertos deben cerrarse antes del final del documento.</li>
+				<li><b>HTML1522</b>	Etiqueta final no válida: < /br >. Usa < br > o < br / > en su lugar.</li>
+				<li><b>HTML1523</b>	Etiqueta final superpuesta. Las etiquetas se deben estructurar como < b >< i >< /i >< /b > en lugar de < b >< i >< /b >< /i >.</li>
+				<li><b>HTML1524</b>	DOCTYPE no válido. El doctype más corto posible es < !DOCTYPE html>.</li>
+				<li><b>HTML1525</b>	Se encontró una etiqueta HTML inesperada en el contenido externo (MathML/SVG).</li>
+				<li><b>HTML1526</b>	Anidamiento no válido. Una etiqueta < nobr > no se puede estar dentro de otra etiqueta.</li>
+				<li><b>HTML1527</b>	DOCTYPE esperado. El doctype más corto posible es < !DOCTYPE html >.</li>
+				<li><b>HTML1528</b>	< image > inesperada en el contenido HTML. Usa < img > en su lugar.</li>
+				<li><b>HTML1529</b>	El valor de atributo xmlns:xlink no es válido. Este valor debe ser '< https://w3.org/1999/xlink >'.</li>
+				<li><b>HTML1530</b>	Se encontró texto en un elemento de tabla estructural. El texto de la tabla solo puede colocarse dentro de elementos < caption >, < td > o < th >.</li>
+				<li><b>HTML1531</b>	El valor de atributo xmlns no es válido. Para los elementos SVG, el valor debe ser "< https://w3.org/2000/svg/ >.</li>
+				<li><b>HTML1532</b>	El valor de atributo xmlns no es válido. Para los elementos MathML, el valor debe ser "< https://w3.org/1998/Math/MathML/ >.</li>[7]
+			</blockquote>
+
+
+
+			<b><center>JavaScript</center></b><br>
+			Javascript es un lenguaje interpretado usado para múltiples propósitos pero solo considerado como un complemento hasta ahora.[6]<br>
+			<strong>Métodos</strong><br>
+			<blockquote>
+				<strong>Métodos Numéricos</strong>
+				<dl><b>parseInt()</b> - Transforma un string en número entero.</dl>
+				<dl><b>parseFloat()</b> - Hace lo mismo que parseInt pero en este caso con un número decimal.</dl>
+				<strong>Métodos para Strings</strong>
+				<dl><b>indexOf()</b> - Devuelve el primer elemento de un string que sea igual al valor indicado dentro del paréntesis.</dl>
+				<dl><b>lastIndexOf()</b> - Hace lo mismo que indexOf() pero empezando por el final de un string</dl>
+				<dl><b>split()</b> - Crea una lista de elementos a partir de un string separando los elementos por el carácter indicado dentro del paréntesis.</dl>
+				<dl><b>Slice(x, y)</b> - Devuelve los y caracteres a partir de la posición x.</dl>
+				<strong>Métodos para Srreglos</strong>
+				<dl><b>lenght</b> - Devuelve el número de elementos de una lista.</dl>
+				<dl><b>join()</b> - Junta todos los elementos de una lista separados por el carácter que indiquemos dentro del paréntesis</dl>
+				<dl><b>pop()</b> - Elimina el último elemento de una lista y hace que la lista quede disminuida en una posición su longitud.</dl>
+				<dl><b>sort()</b> - Ordena alfabéticamente o numéricamente los elementos de una lista.</dl>
+				<dl><b>slice()</b> - Tiene el mismo funcionamiento que el slice() de los strings pero aplicado a listas.</dl>[8]
+			</blockquote>
+
+			<strong>Códigos de Errores</strong><br>
+			<blockquote>
+				<b>Error</b>
+				<li>Permission denied to access property "x"</li>
+				<br><b>InternalError</b>
+				<li>Too much recursion</li>
+				<br><b>RangeError</b>
+				<li>Argument is not a valid code point</li>
+				<li>Invalid array length</li>
+				<li>Invalid date</li>
+				<li>Precision is out of range</li>
+				<li>Radix must be an integer</li>
+				<li>Repeat count must be less than infinity</li>
+				<li>Repeat count must be non-negative</li>
+				<br><b>ReferenceError</b>
+				<li>"x" is not defined</li>
+				<li>Sssignment to undeclared variable "x"</li>
+				<li>Can't access lexical declaration`X' before initialization</li>
+				<li>Deprecated caller or arguments usage</li>
+				<li>Invalid assignment left-hand side</li>
+				<li>Reference to undefined property "x"</li>
+				<br><b>SyntaxError</b>
+				<li>"0" - prefixed octal literals and octal escape seq. are deprecated</li>
+				<li>"Use strict" not allowed in function with non-simple parameters</li>
+				<li>"x" is a reserved identifier</li>
+				<li>JSON.parse: bad parsing</li>
+				<li>Malformed formal parameter</li>
+				<li>Unexpected token</li>
+				<li>Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead</li>
+				<li>A declaration in the head of a for-of loop can't have an initializer</li>
+				<li>Applying the 'delete' operator to an unqualified name is deprecated</li>
+				<li>For-in loop head declarations may not have initializers</li>
+				<li>Function statement requires a name</li>
+				<li>Identifier starts immediately after numeric literal</li>
+				<li>Illegal character</li>
+				<li>Invalid regular expression flag "x"</li>
+				<li>Missing ) after argument list</li>
+				<li>Missing ) after condition</li>
+				<li>Missing : after property id</li>
+				<li>Missing ; before statement</li>
+				<li>Missing = in const declaration</li>
+				<li>Missing ] after element list</li>
+				<li>Missing formal parameter</li>
+				<li>Missing name after . operator</li>
+				<li>Missing variable name</li>
+				<li>Missing } after function body</li>
+				<li>Missing } after property list</li>
+				<li>Redeclaration of formal parameter "x"</li>
+				<li>Return not in function</li>
+				<li>Test for equality (==) mistyped as assignment (=)?</li>
+				<li>Unterminated string literal</li>
+				<br><b>TypeError</b>
+				<li>"x"has no properties</li>
+				<li>"x" is (not) "y"</li>
+				<li>"x" is not a constructor</li>
+				<li>"x" is not a function</li>
+				<li>"x" is not a non-null object</li>
+				<li>"x" is read-only</li>
+				<li>'x' is not iterable</li>
+				<li>More arguments needed</li>
+				<li>Reduce of empty array with no initial value</li>
+				<li>X.prototype.y called on incompatible type</li>
+				<li>Can't access dead object</li>
+				<li>Can't access property "x" of "y"</li>
+				<li>Can't assign to property "x" on "y": not an object</li>
+				<li>Can't define property "x": "obj" is not extensible</li>
+				<li>Can't delete non-configurable array element</li>
+				<li>Can't redefine non-configurable property "x"</li>
+				<li>Cannot use 'in' operator to search for 'x' in 'y'</li>
+				<li>Cyclic object value</li>
+				<li>Invalid 'instanceof' operand 'x'</li>
+				<li>Invalid Array.prototype.sort argument</li>
+				<li>Invalid arguments</li>
+				<li>Invalid assignment to const "x"</li>
+				<li>Property "x" is non-configurable and can't be deleted</li>
+				<li>Setting getter-only property "x"</li>
+				<li>Variable "x" redeclares argument</li>
+				<br><b>URIError</b>
+				<li>UMalformed URI sequence</li>
+				<br><b>Warning</b>
+				<li>08/09 is not a legal ECMA-262 octal constant</li>
+				<li>-file- is being assigned a //# sourceMappingURL, but already has one</li>
+				<li>Date.prototype.toLocaleFormat is deprecated</li>
+				<li>JavaScript 1.6's for-each-in loops are deprecated</li>
+				<li>String.x is deprecated; use String.prototype.x instead</li>
+				<li>Expression closures are deprecated</li>
+				<li>Unreachable code after return statement</li>[9]
+			</blockquote>
+
+
+
+			<b><center>php</center></b><br>
+			<strong>Métodos</strong><br>
+			<blockquote>
+				<dl><b>GET</b> - Es usado en formularios, salvo que el desarrollador sepa muy bien lo que hace y los datos no sean comprometidos, no debe usarse para otras cosas diferentes a los formularios de búsqueda</dl>
+				<dl><b>POST</b> - Permite que los usuarios envien tanto archivos de texto como binarios.</dl>
+				<dl><b>REQUEST</b> - Es el método mas utilizado para recuperar información, ya que sirve tanto para el POST como GET y también para COOKIES</dl>[10]
+			</blockquote>
+
+			<strong>Códigos de Errores</strong><br>
+			<blockquote>
+				<b>Fatal Error</b><br>
+				Son errores que pueden comprometer seriamente el funcionamiento del programa y por ello, para prevenir males mayores, se aborta la ejecución y el programa deja de funcionar por completo. Es el nivel de error más alto.
+				<li><b>E_ERROR</b> - Error crítico generado en tiempo de ejecución. Son generados por el motor intérprete de PHP.</li>
+				<li><b>E_CORE_ERROR</b> - Error crítico que ocurre durante el arranque inicial de PHP. Son generados por el core de PHP.</li>
+				<li><b>E_COMPILE_ERROR</b> - Error crítico que ocurre en tiempo de compilación y son generados por el Zend Engine.</li>
+				<li><b>E_USER_ERROR</b> - Error crítico generado por la función trigger_error(), utilizado por el desarrollador para generar errores fatales personalizados.</li>
+				<li><b>E_RECOVERABLE_ERROR</b> - Es un error crítico recuperable, un error potencialmente peligroso pero que no deja al programa en un estado inestable.</li>
+				<br><b>Warning</b><br>
+				Son errores menos severos que los errores fatales y no suponen la terminación del programa. Esto no quiere decir que no puedan ser graves.
+				<li><b>E_WARNING</b> - Generados en tiempo de ejecución.</li>
+				<li><b>E_CORE_WARNING</b> - Generados por el núcleo de PHP durante el arranque inicial.</li>
+				<li><b>E_COMPILE_WARNING</b> - Generados en tiempo de compilación por Zend Engine.</li>
+				<li><b>E_USER_WARNING</b> - Generado por la función trigger_error().</li>
+				<br><b>Notice</b><br>
+				Son los errores de menor nivel de gravedad. Señalan la presencia de un posible error pero que podrían ocurrir también de forma normal en la ejecución del programa.
+				<li><b>E_NOTICE</b> - Generados en tiempo de ejecución.</li>
+				<li><b>E_USER_NOTICE</b> - Generados por la función trigger_error().</li>
+				<li><b>E_STRICT</b> - Si se habilita, PHP generará avisos en tiempo de ejecución sugiriendo cambios para que el código se ajuste de forma estricta a los estándares PHP, lo que aumentará la compatibilidad del código con futuras versiones de PHP.</li>
+				<li><b>E_DEPRECATED</b> - Si se habilita, PHP generará avisos en tiempo de ejecución indicando partes de código utilizado que dejará de funcionar en futuras versiones de PHP.</li>
+				<br><b>Parse</b><br>
+				Son errores del analizador del núcleo de PHP y suponen la terminación del programa.
+				<li><b>Errores de Sintaxis</b></li>[11]
+			</blockquote>
+
+
+
+			<b><center>JavaServer Pages</center></b><br>
+			<strong>Métodos</strong><br>
+			<blockquote>
+				<dl><b>jspInit()</b> -  Es automaticamente llamado por el servidor cuando una página JSP es inicializada o ejecutada por primera vez. Este metodo tiene un modificador de acceso público y no acepta ni regresa algún valor. En este metodo, podemos añadir codigo de iniciaización.</dl>
+				<dl><b>jspDestroy()</b> - Es llamado automaticamente por el servidor cuando una página JSP es destruida o descargada. Como el método jspInit(), ´jspDestroy también cuenta con un modificador de acceso público y no acepta ni regresa ningun valor.</dl>[12]
+			</blockquote>
+
+			<strong>Códigos de Errores</strong><br>
+			<blockquote>
+				<b>Translation Time Error</b><br>
+				This type of Error occurs during the initial request. When a JSP page is first requested and goes through the initial translation from a JSP source file into a corresponding Servlet class file. These errors are usually the result of compilation failures.
+				<li>Error Status Code 500</li>
+				<li>Server Error</li>
+				<b>JSP Request Time Error</b><br>
+				This type of Error occurs during subsequent requests. These Errors are Run-Time errors that can occur in either the body of the JSP page or in some other object that is called from the body of the JSP Page.
+				<li>Exception</li>
+				<li>Uncaught Exception</li>[13]
+			</blockquote>
+
+
+
+			<b><center>Ajax</center></b><br>
+			<strong>Métodos</strong><br>
+			<blockquote>
+				<dl><b>$.ajax()</b> - Performs an async AJAX request.</dl>
+				<dl><b>$.ajaxPrefilter()</b> - Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().</dl>
+				<dl><b>$.ajaxSetup()</b> - Sets the default values for future AJAX requests.</dl>
+				<dl><b>$.ajaxTransport()</b> - Creates an object that handles the actual transmission of Ajax data.</dl>
+				<dl><b>$.get()</b> - Loads data from a server using an AJAX HTTP GET request.</dl>
+				<dl><b>$.getJSON()</b> - Loads JSON-encoded data from a server using a HTTP GET request.</dl>
+				<dl><b>$.parseJSON()</b> - Deprecated in version 3.0, use JSON.parse() instead. Takes a well-formed JSON string and returns the resulting JavaScript value.</dl>
+				<dl><b>$.getScript()</b> - Loads (and executes) a JavaScript from a server using an AJAX HTTP GET request.</dl>
+				<dl><b>$.param()</b> - Creates a serialized representation of an array or object (can be used as URL query string for AJAX requests).</dl>
+				<dl><b>$.post()</b> - Loads data from a server using an AJAX HTTP POST request.</dl>
+				<dl><b>ajaxComplete()</b> - Specifies a function to run when the AJAX request completes.</dl>
+				<dl><b>ajaxError()</b> - Specifies a function to run when the AJAX request completes with an error.</dl>
+				<dl><b>ajaxSend()</b> - Specifies a function to run before the AJAX request is sent.</dl>
+				<dl><b>ajaxStart() </b>- Specifies a function to run when the first AJAX request begins.</dl>
+				<dl><b>ajaxStop()</b> - Specifies a function to run when all AJAX requests have completed.</dl>
+				<dl><b>ajaxSuccess()</b> - Specifies a function to run when an AJAX request completes successfully.</dl>
+				<dl><b>load()</b> - Loads data from a server and puts the returned data into the selected element.</dl>
+				<dl><b>serialize()</b> - Encodes a set of form elements as a string for submission.</dl>
+				<dl><b>serializeArray()</b> - Encodes a set of form elements as an array of names and values.</dl> [14]
+			</blockquote>
+		</article>
+
+		<article>
+			<center><h2>Preguntas a Responder</h2></center>
+			<li><b>¿Cuál es la diferencia entre Internet y la World Wide Web?</b> - Internet es mejor conocida como la Red de Redes y es un concepto que engloba muchas partes mientras que  la World Wide Web es el sistema utilizado para conectarse a Internet. </li>
+			<li><b>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</b> - Generalmente hablando, HEAD pide el encabezado con todo lo que se despliega del navegador; POST es para enviar cualquier recurso al servidor; PUT y PATCH actualizan y DELETE borra recursos.</li>
+			<li><b>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</b> - POST, ya que enviaa una entidad a un recurso en específico.[3] </li>
+			<li><b>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</b> - GET.</li>
+			<li><b>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</b> - Quiere decir que todo esta bien.</li>
+			<li><b>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</b> - Si y no, ya que pudo ser un error por parte del Usuario al poner algo que no existe, o ser un error del Desarrollador por no poner algo que faltaba o ser un error que busca la proteccion de algun dato que el Desarrolador hizo a porposito.</li>
+			<li><b>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</b> - Si, ya que es un error del servidor</li>
+			<li><b>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</b> - Significa que ya no tienen soporte en la versión HTML5, como lo son: < tt> < /tt>, < font >< /font >, < acronym >< /acronym >, etc.[15]</li>
+			<li><b>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</b> - Simplificación y adición de nuevos elementos. Básicamente HTML 4 no fue diseñado, fue creado. La principal diferencia es que HTML 4 no hace distinción entre contenido, estilo, todo este mezclado, HTML 5 cuenta con una separación de capas, es un conjunto de tecnologías que incluye HTML, JavaScript y CSS</li>
+			<li><b>¿Qué componentes de estructura y estilo tiene una tabla?</b> - Son construidas utilizando elementos. En particular, una tabla básica puede ser declarada usando tres elementos, a saber, table (el contenedor principal), tr (representando a las filas contenedoras de las celdas) y td (representando a las celdas).[16] Su estilo es sencillo y en detalle puede ser alterado con CSS. </li>
+			<li><b>¿Cuáles son los principales controles de una forma HTML5?</b> - < input type="number" / "range" / "date" / "color" / "search" / "tel" / "email" / "url"> entre otros.[17]</li>
+			<li><b>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</b> - Usando Chrome como mi navegador, HTML5 soporta 473/555 puntos</li>
+			<b>Sobre el ciclo de vida y desarrollo de los sistemas de información:</b>
+			<li><b>¿Cuál es el ciclo de vida de los sistemas de información?</b> - Es un enfoque por fases del análisis y diseño que sostiene que los sistemas son desarrollados de mejor manera mediante el uso de un ciclo especifico de actividades del analista y del usuario.[18] </li>
+			<li><b>¿Cuál es el ciclo de desarrollo de sistemas de información?</b> - Es un método que facilita el desarrollo de los sistemas de información. Consta de 7 fases: Planificación del concepto, Definición de requisitos, Diseño, Fase del desarrollo de pruebas, Puesta en marcha, Operaciones y mantenimientos y Disposición.[19]</li>
+
+		</article>
+	</section>
+
+	<section>
+		<center><h2>Bibliografía</h2></center>
+		[1] <a href="https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/">https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/</a><br>
+		[2] <a href="https://computer.howstuffworks.com/question334.htm">https://computer.howstuffworks.com/question334.htm</a><br>
+		[3] <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Methods">https://developer.mozilla.org/es/docs/Web/HTTP/Methods</a><br>
+		[4] <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status">https://developer.mozilla.org/es/docs/Web/HTTP/Status</a><br>
+		[5] <a href="https://www.arkaitzgarro.com/html5/capitulo-1.html">https://www.arkaitzgarro.com/html5/capitulo-1.html</a><br>
+		[6] J. D. Gauchat, El gran libro de HTML5, CSS3, y Javascript, 377, 2012<br>
+		[7] <a href="https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide/console/error-and-status-codes">https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide/console/error-and-status-codes</a><br>
+		[8] <a href="https://francescricart.com/metodos-javascript/#verMetodos">https://francescricart.com/metodos-javascript/#verMetodos</a><br>
+		[9] <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Errors">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Errors</a><br>
+		[10] <a href="https://cdsphp.wordpress.com/about/">https://cdsphp.wordpress.com/about/</a><br>
+		[11] <a href="https://cybmeta.com/tipos-de-errores-en-php">https://cybmeta.com/tipos-de-errores-en-php</a><br>
+		[12] <a href="https://www.decodejava.com/jsp-methods.htm">https://www.decodejava.com/jsp-methods.htm</a><br>
+		[13] <a href="https://www.javaken.com/threads/what-are-the-types-of-jsp-errors.1859/">https://www.javaken.com/threads/what-are-the-types-of-jsp-errors.1859/</a><br>
+		[14] <a href="https://www.w3schools.com/jquery/jquery_ref_ajax.asp">https://www.w3schools.com/jquery/jquery_ref_ajax.asp</a><br>
+		[15] <a href="https://medium.com/level-up-web/beginners-html-cheat-sheet-f9b1e3ce88a6">https://medium.com/level-up-web/beginners-html-cheat-sheet-f9b1e3ce88a6</a><br>
+		[16] <a href="https://www.htmlquick.com/es/tutorials/tables.html#concept">https://www.htmlquick.com/es/tutorials/tables.html#concept</a><br>
+		[17] <a href="https://www.w3.org/community/webed/wiki/Es/Elementos_de_formulario_adicionales_del_HTML5">https://www.w3.org/community/webed/wiki/Es/Elementos_de_formulario_adicionales_del_HTML5</a><br>
+		[18] <a href="https://es.slideshare.net/MonicaNaranjo20/ciclo-de-vida-de-un-sistema-de-informacion-93192099#:~:text=4.,del%20analista%20y%20del%20usuario.">https://es.slideshare.net/MonicaNaranjo20/ciclo-de-vida-de-un-sistema-de-informacion-93192099#:~:text=4.,del%20analista%20y%20del%20usuario.</a><br>
+		[19] <a href="https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/">https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/</a><br>
+
+	</section>
+
+
+<footer>
+	<center>Creado usando Sublime Text<br><a href="https://www.sublimetext.com">Sublime Text</a>	</center>
+</footer>
+
 </body>
 </html>
