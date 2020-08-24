@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Lab 51</title>
+    <link rel="stylesheet" href="Lab5.css" />
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Laboratorio 5: Programación orientada a eventos</h1>
+    </header>
+
+    <h2>Preguntas a responder:</h2>
+
+    <section id="Preguntas">
+        <ul>
+            <li><b>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas
+                    antes de enviar los datos al servidor?</b></li>
+            <p>
+                Para corroborar que efectivamente se esta enviando información requerida y evitar ciertos errores, como
+                menciona el sitio uniwebsidad.com, <q>si el usuario ha cometido algún error al rellenar el formulario,
+                    se le puede notificar de forma instantanea, sin necesidad de esperar la respuesta
+                    delservidor.</q>[1]
+            </p>
+
+            <li><b>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</b></li>
+            <p>
+                Basta con deshabilitar JavaScript
+            </p>
+
+            <li><b>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera
+                    pregunta dice que es una buena práctica?</b></li>
+            <p>
+                Porque si es deshabilitado, el contenido o la funcionalidad de la página puede estar limitada o no
+                disponible.
+
+            </p>
+        </ul>
+    </section>
+
+    <h2>Bibliografía</h2>
+
+    <section id="Bibliografia">
+        <ul>
+            <p><b>[1] - </b><a
+                    href="https://uniwebsidad.com/libros/javascript/capitulo-7/validacion">https://uniwebsidad.com/libros/javascript/capitulo-7/validacion</a>
+            </p>
+        </ul>
+    </section>
+
+    <h2>Programación Orientada a Eventos</h2>
+
+    <section id="POE">
+        <h3>Página para validar Passwords</h3>
+        <form action="" name="Contraseña">
+            Contraseña: <input type="password" name="Password_1" size="20">
+            <br>
+            Volver a escribir la Contraseña: <input type="password" name="Password_2" size="20">
+            <br>
+            <input type="button" value="Verificar" onClick="Verificar()">
+        </form>
+
+        <h3>Página para vender productos</h3>
+        <form action="" name="Venta">
+            <table>
+                <tr>
+                    <td><input type="button" value="Raid Ring" onClick="RingShopping()"></td>
+                    <td><input type="button" value="Infinity Scarf" onClick="ScarfShopping()"></td>
+                    <td><input type="button" value="Grimoire Anthology" onClick="GrimoireShopping()"></td>
+                </tr>
+                <tr>
+                    <td><img src="Ring.jpg" alt="BUNGIE REWARDS RAID RING"></td>
+                    <td><img src="Scarf.png"></td>
+                    <td><img src="Anthology.jpg"></td>
+                </tr>
+            </table>
+
+            <input type="number" name="Cantidad">
+
+            
+
+        </form>
+
+        <script src="Lab5.js" type="text/JavaScript"></script>
+    </section>
+
+
+</body>
+
+</html>

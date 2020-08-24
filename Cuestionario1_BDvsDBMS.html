@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Cuestionario 1</title>
+    <link rel="stylesheet" href="Cuestionario1_BDvsDBMS.css" />
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Cuestionario 1 - BD vs DBMS</h1>
+        <p>Jesús Olmos Larios - A01275595</p>
+    </header>
+
+    <h2>Preguntas a responder:</h2>
+
+    <section id="Preguntas">
+        <ul>
+            <li><b>¿Qué es entonces una base de datos - DB?</b></li>
+            <p>
+                Una Base de Datos, descrita por el libro Database systems: a practical approach to design, menciona que
+                <q>Es una estructura compartida computacional</q>[1]. Esta estructura es capaz de almacenar datos de
+                usuario y metadatos.
+            </p>
+
+            <li><b>¿En qué casos es conveniente usar bases de datos?</b></li>
+            <p>
+                Considero que cualquier situación que exija almacenar grandes cantidades de información y a su vez
+                requiera que esa información sea segura, facil de acceder y modificar, necesita ser almacenada
+                utilizando bases de datos.
+            </p>
+
+            <li><b>¿Qué es un sistema de gestión de base de datos - DBMS?</b></li>
+            <p>
+                Volviendo a utilizar el libro, Database systems: a practical approach to design, menciona que <q>Es una
+                    colección de programas que adminsitran tanto la estructura de las bases de datos como los accesos de
+                    control de la informacion almacenada en las mismas</q>[1].
+            </p>
+
+            <li><b>Enlista y explica las funciones/responsabilidades que tienen los DBMS</b></li>
+            <ul>
+                <p><b>Abstracción de los datos - </b> Los DBMS ahorran a los usuarios detalles acerca del almacenamiento
+                    físico de los datos. Da lo mismo si una base de datos ocupa uno o
+                    cientos de archivos, este hecho se hace transparente al usuario. Así, se definen varios niveles de
+                    abstracción.
+                </p>
+
+                <p><b>Independencia - </b> Consiste en la capacidad de modificar el esquema (físico o lógico)
+                    de una base de datos sin tener que realizar cambios en las aplicaciones que se
+                    sirven de ella.
+                </p>
+
+                <p><b>Consistencia - </b>En aquellos casos en los que no se ha logrado eliminar la
+                    redundancia, será necesario vigilar que aquellos datos que aparecen repetidos se
+                    actualice de forma coherente, es decir, que todos los datos repetidos se actualicen
+                    de forma simultánea.
+
+                </p>
+
+                <p><b>Seguridad - </b>Los datos almacenados en una base de datos pueden llegar a tener un
+                    gran valor. Los DBMS deben garantizar que estos datos se encuentren seguros
+                    frente a usuarios malintencionados, que intenten leer datos privilegiados; frente a
+                    ataques que deseen manipular o destruir los datos; o simplemente ante las torpezas
+                    de algún usuario autorizado pero despistado. Normalmente, los DBMS disponen de
+                    un complejo sistema de permisos a usuarios y grupos de usuarios, que permiten
+                    otorgar diversas categorías de permisos.
+                </p>
+
+                <p><b>Integridad - </b>Adoptar las medidas necesarias para garantizar la validez de los datos
+                    almacenados. Es decir, se trata de proteger los datos ante fallos de hardware, datos
+                    introducidos por usuarios descuidados, o cualquier otra circunstancia capaz de
+                    corromper los datos almacenados. Los DBMS proveen mecanismos para garantizar
+                    la recuperación de la base de datos hasta un estado consistente conocido en forma
+                    automática.
+                </p>
+                <p><b>Respaldo - </b>Los DBMS deben proporcionar una forma eficiente de realizar copias de
+                    respaldo de los datos almacenados y de restaurar a partir de estas copias los datos
+                    que se hayan podido perder.</p>
+
+                <p><b>Control de Concurrecnia - </b> En la mayoría de entornos lo más habitual es que sean
+                    muchas las personas que acceden a una base de datos, y es también frecuente que dichos accesos se
+                    realicen de forma simultánea. Así pues, un DBMS debe controlar
+                    este acceso concurrente a la DB, que podría derivar en inconsistencias.
+                </p>
+
+                <p><b>Manejo de Transacciones - </b>Una Transacción es un programa que se ejecuta como
+                    una sola operación. Esto quiere decir que el estado luego de una ejecución en la
+                    que se produce una falla es el mismo que se obtendría si el programa no se hubiera
+                    ejecutado. Los DBMS proveen mecanismos para programar las modificaciones de
+                    los datos de una forma mucho más simple que si no se dispusiera de ellos.
+                </p>
+
+                <p><b>Tiempo de Respuesta - </b>Lógicamente, es deseable minimizar el tiempo que el
+                    DBMS tarda en darnos la información solicitada y en almacenar los cambios realizados.[2]
+                </p>
+
+            </ul>
+
+            <li><b>Ejemplifica y justifica en que proyecto de los que has realizado hubiera sido conveniente utilizar una
+                base de datos</b></li>
+            <p>
+                Para ser honestos, no he trabajado con proyectos que hubieran requerido bases de datos. Entre los proyectos que e realizado recuerdo u
+            </p>
+
+        </ul>
+    </section>
+
+    <h2>Bibliografía</h2>
+
+    <section id="Bibliografia">
+        <ul>
+            <p><b>[1] - </b>Connolly, T. M., & Begg, Database systems: a practical approach to design, 790, (2005).</p>
+            <p><b>[2] - </b><a href="http://cursos.aiu.edu/base%20de%20datos%20SOG/Sesi%C3%B3n%201.pdf">http://cursos.aiu.edu/base%20de%20datos%20SOG/Sesi%C3%B3n%201.pdf</a></p>
+
+        </ul>
+    </section>
+
+</body>
+
+</html>
