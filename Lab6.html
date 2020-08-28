@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab6</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='Lab6.css'>
+</head>
+
+<body>
+    <header id="Estilo">
+        <h1>Laboratorio 6</h1>
+        <h2>Documentos dinámicos con JavaScript</h2>
+    </header>
+
+    <h2>Preguntas a Responder</h2>
+    <section id="Preguntas">
+        <ul>
+            <li><b>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</b></li>
+            <table>
+                <tr>
+                    <td><b><i>static</i></b></td>
+                    <td>Es el valor por defecto. Un elemento con position: static; no está posicionado en ninguna forma
+                        en específico. Se dice que un elemento static, está no posicionado y un elemento con valor
+                        establecido de position está posicionado.</td>
+                </tr>
+                <tr>
+                    <td><b><i>relative</i></b></td>
+                    <td>Se comporta de la misma manera que static a menos que le agregues otras propiedades como top,
+                        right, bottom, y left, lo cual causará que su posición normal se reajuste.</td>
+                </tr>
+                <tr>
+                    <td><b><i>fixed</i></b></td>
+                    <td>Un elemento fixed (fijo) se posiciona a la ventana del navegador de manera relativa, lo que
+                        significa que se mantendrá en el mismo lugar incluso después de hacer scroll en la página.</td>
+                </tr>
+                <tr>
+                    <td><b><i>absolute</i></b></td>
+                    <td>Es el valor más mañoso. Se comporta como fixed pero es relativo a su ancestro posicionado más
+                        cercano en lugar de ser relativo a la ventana del navegador. Si un elemento con position:
+                        absolute; no tiene ancestros posicionados, usará el elemento body del documento, y se seguirá
+                        moviendo al hacer scroll en la página. [1] </td>
+                </tr>
+            </table>
+            <br>
+
+            <li><b>¿Cuáles son los valores estándar para la propiedad visibility?</b></li>
+            <table>
+                <tr>
+                    <td><b><i>visible</i></b></td>
+                    <td>El elemento se muestra normalmente.</td>
+                </tr>
+                <tr>
+                    <td><b><i>hidden</i></b></td>
+                    <td>El elemento está escondido, pero los demás elementos se colocan como si ése elemento estuviera
+                        presente. Esto funciona como si el elemento fuera absolutamente transparente.</td>
+                </tr>
+                <tr>
+                    <td><b><i>collapse</i></b></td>
+                    <td>Para tablas, filas, columnas y grupos de tablas. Las filas o columnas se esconden y el espacio
+                        que normalmente ocupan, es ocupado. El tamaño de las columnas o filas restantes, es calculado
+                        como si las filas/columnas fusionadas estuvieran presentes. Esta propiedad se diseñó así, al fin
+                        de permitir la supresión rápida de filas/columnas de una tabla sin necesidad de calcular de
+                        nuevo los altos y los anchos de cada porción de tabla. [2]</td>
+                </tr>
+            </table>
+            <br>
+            <li><b>¿Qué es el zIndex y para qué sirve?</b></li>
+            <p>Es una propiedad de CSS la cual, según el sitio feveloper.mozilla.org <q> indica el orden de un elemento
+                    posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor
+                    valor z-index cubren aquellos con menor valor.</q>[3]</p>
+        </ul>
+    </section>
+
+    <h2>Diversidad con JavaScript</h2>
+    <section id="Instrucciones">
+        <p id="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, omnis. Animi culpa minus quasi cum et provident non, quod sunt nobis illum magni ratione facere blanditiis deserunt aliquid adipisci voluptates?</p><br>
+        <p>Coloca a los Pingüinos dentro del cuadro</p>
+        <img id="drag1" src="Penguins.jpg" draggable="true" ondragstart="drag(event)"  height="300">
+        <div id="divisor" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </section>
+
+
+    <h2>Bibliografía</h2>
+    <section id="Bibliografia">
+        <ul>
+            <p><b>[1] - </b><a
+                    href="https://es.learnlayout.com/position.html"> https://es.learnlayout.com/position.html</a></p>
+            <p><b>[2] - </b><a
+                    href="https://developer.mozilla.org/es/docs/Web/CSS/visibility#:~:text=Resumen,o%20columnas%20de%20una%20tabla."> https://developer.mozilla.org/es/docs/Web/CSS/visibility#:~:text=Resumen,o%20columnas%20de%20una%20tabla.</a>
+            </p>
+            <p><b>[3] - </b><a
+                    href="https://developer.mozilla.org/es/docs/Web/CSS/z-index#:~:text=La%20propiedad%20CSS%20z%2Dindex,cubren%20aquellos%20con%20menor%20valor."> https://developer.mozilla.org/es/docs/Web/CSS/z-index#:~:text=La%20propiedad%20CSS%20z%2Dindex,cubren%20aquellos%20con%20menor%20valor.</a>
+            </p>
+            <h3>Enlaces de fuentes consultadas</h3>
+            <a href="https://www.it-swarm.dev/es/html/crear-marca-de-agua-usando-html-y-css/1043602938/">https://www.it-swarm.dev/es/html/crear-marca-de-agua-usando-html-y-css/1043602938/</a>
+            <a href="https://stackoverflow.com/questions/12407845/div-container-with-image-and-other-divs-next-to-each-other">https://stackoverflow.com/questions/12407845/div-container-with-image-and-other-divs-next-to-each-other</a>
+            <a href="https://stackoverflow.com/questions/21458162/creating-watermark-using-html-and-css">https://stackoverflow.com/questions/21458162/creating-watermark-using-html-and-css</a>
+            <a href="https://www.w3schools.com/css/css_font.asp">https://www.w3schools.com/css/css_font.asp</a>
+            <a href="https://www.w3schools.com/js/js_popup.asp">https://www.w3schools.com/js/js_popup.asp</a>
+            <a href="https://francescricart.com/introduccion-a-las-animaciones-javascript-setinterval-y-settimeout/">https://francescricart.com/introduccion-a-las-animaciones-javascript-setinterval-y-settimeout/</a>
+            <a href="https://developer.mozilla.org/es/docs/Web/API/WindowTimers/setInterval">https://developer.mozilla.org/es/docs/Web/API/WindowTimers/setInterval</a>
+            <a href="http://www.hemisferiodigital.es/lorem-ipsum/">http://www.hemisferiodigital.es/lorem-ipsum/</a>
+            <a href="https://stackoverflow.com/questions/16437173/stop-setinterval/16437215#:~:text=Use%20a%20variable%20and%20call%20clearInterval%20to%20stop%20it.&text=to%20a%20variable-,var%20interval%3B%20%24(document).,interval)%20to%20clear%20it%20again.">https://stackoverflow.com/questions/16437173/stop-setinterval/16437215#:~:text=Use%20a%20variable%20and%20call%20clearInterval%20to%20stop%20it.&text=to%20a%20variable-,var%20interval%3B%20%24(document).,interval)%20to%20clear%20it%20again.</a>
+            <a href="https://www.w3schools.com/html/html5_draganddrop.asp">https://www.w3schools.com/html/html5_draganddrop.asp</a>
+        </ul>
+    </section>
+
+    <div id="watermark">
+        <h4>Jesús Olmos Larios<br>A01275595</h4>
+    </div>
+    <script src='Lab6.js'></script>
+</body>
+
+</html>
