@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 9</title>
+        <link rel="stylesheet" href="Lab9.css">
+    </head>
+    <header>
+        <h1>Lab 9: Introducción a php</h1>
+        <h2>Jesús Olmos Larios - A01275595</h2>
+    </header>
+
+    <body>
+        <section id="Preguntas">
+            <h3>Preguntas a Responder</h3>
+            <ul>
+                <strong>¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención.</strong>
+                <p>Permite conocer a través de una representación visual en forma de tabla, una gran cantidad de información sobre la configuración de un propio servidor, entre ellas:
+                    <ol>Ruta absoluta de la carpeta pública en el servidor</ol>
+                    <ol>Versión de php activa</ol>
+                    <ol>Ubicación de los logs de errores [1]</ol>
+                </p>
+
+                <strong>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</strong>
+                <p>Se deben de relaizar cambios en las configuraciones de seguridad para, de esta forma, permitir un acceso remoto de forma segura. Se hará un ajuste al script de conexión y se configurará con la IP en la cual los clientes podrán acceder. [2]</p>
+
+                <strong>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.</strong>
+                <p>Se despliega del lado del servidor ya que php es un lenguaje no procesable por un navegador web. La petición es ejecutada mediante el servidor y después solo se despliega en un formato comprensible para el navegador</p>
+            </ul>
+        </section>
+
+        <section id="Bibliografia">
+            <h3>Bibliografía</h3>
+            <ul>
+                <p>[1] - <a href="https://www.loopeando.com/que-es-y-como-crear-un-phpinfo/#:~:text=phpinfo()%20es%20una%20funci%C3%B3n,se%20utiliza%20con%20bastante%20frecuencia.&text=Versi%C3%B3n%20de%20PHP%20activa">https://www.loopeando.com/que-es-y-como-crear-un-phpinfo/#:~:text=phpinfo()%20es%20una%20funci%C3%B3n,se%20utiliza%20con%20bastante%20frecuencia.&text=Versi%C3%B3n%20de%20PHP%20activa</a></p>
+                <p>[2] - <a href="https://docs.microsoft.com/es-es/aspnet/web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment">https://docs.microsoft.com/es-es/aspnet/web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment</a></p>                
+            </ul>
+        </section>
+
+    </body>
+</html>
