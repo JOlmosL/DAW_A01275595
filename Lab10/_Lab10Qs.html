@@ -1,0 +1,48 @@
+<section id="Preguntas">
+    <h2>Preguntas a Responder</h2>
+    <ol>
+        <p><b>¿Por qué es una buena práctica separar el controlador de la vista? - </b>Para obtener un codigo mejor estructurado y ordenado. Facilita la búsqueda de errores y ubicación de partes de código que se busquen mejorar.</p>
+        <p><b>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</b>
+            <ul><b>Superglobals - </b>Superglobals son variables internas que están disponibles siempre en todos los ámbitos.</ul>
+            <ul><b>$Globals - </b>Hace referencia a todas las variables disponibles en el ámbito global.</ul>
+            <ul><b>$_SERVER - </b>Información del entorno del servidor y de ejecución.</ul>
+            <ul><b>$_FILES - </b>Variables de subida de ficheros HTTP.</ul>
+            <ul><b>$_REQUEST - </b>Variables HTTP Request.</ul>
+            <ul><b>$_SESSION - </b>Variables de sesión.</ul>
+            <ul><b>$_ENV - </b>Variables de entorno.</ul>
+            <ul><b>$_COOKIE - </b>Cookies HTTP.</ul>
+            <ul><b>$php_errormsg - </b>El mensaje de error anterior.</ul>
+            <ul><b>$HTTP_RAW_POST_DATA - </b>Datos POST sin tratar.</ul>
+            <ul><b>$http_response_header - </b>Encabezados de respuesta HTTP.</ul>
+            <ul><b>$argc -</b>El número de argumentos pasados a un script.</ul>
+            <ul><b>$argv -</b>Array de argumentos pasados a un script. [1]</ul>
+        </p>
+        <p><b>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</b>
+            <ul><b>soundex() - </b>Calcula la clave soundex de un string. Las claves soundex tienen la propiedad que palabras pronunciadas de forma similar producen la misma clave soundex y por lo tanto puede ser usada para simplificar búsquedas en bases de datos donde se conoce la pronunciación pero no la ortografía. [2]</ul>
+            <ul><b>taint() - </b>Corrompe un string. Crea un string corrompido. Solamente se usa para realizar pruebas. [3]</ul>
+        </p>
+        <p><b>¿Qué es XSS y cómo se puede prevenir? - </b>"Cross-Site Scripting" son ataques en forma de entrada, en los cuales scripts maliciosos son insertados en sitios web confiables. Estos ataques ocurren cuando un atacante usa un aaplicación web para mandar codigo malicioso, generalmente en la forma de un "side-script" de parte del sitio hacia un usuario [4]. Pueden ser prevenidos siguiendo las siguientes reglas:
+            <ul>
+                <li>HTML Encode Before Inserting Untrusted Data into HTML Element Content</li>
+                <li>Attribute Encode Before Inserting Untrusted Data into HTML Common Attributes</li>
+                <li>JavaScript Encode Before Inserting Untrusted Data into JavaScript Data Values</li>
+                <li>URL Encode Before Inserting Untrusted Data into HTML URL Parameter Values</li>
+                <li>Sanitize HTML Markup with a Library Designed for the Job</li>
+                <li>Avoid JavaScript URLs</li>
+                <li>Prevent DOM-based XSS [5]</li>
+            </ul>
+        </p>
+    </ol>
+</section>
+
+<section id="Bibliografia">
+    <h2>Bibliografía</h2>
+    <ol>
+        <p><b>[1] - </b><a href="https://www.php.net/manual/es/reserved.variables.php">https://www.php.net/manual/es/reserved.variables.php</a></p>
+        <p><b>[2] - </b><a href="https://www.php.net/manual/es/function.soundex.php">https://www.php.net/manual/es/function.soundex.php</a></p>
+        <p><b>[3] - </b><a href="https://www.php.net/manual/es/function.taint.php">https://www.php.net/manual/es/function.taint.php</a></p>
+        <p><b>[4] - </b><a href="https://owasp.org/www-community/attacks/xss/">https://owasp.org/www-community/attacks/xss/</a></p>
+        <p><b>[5] - </b><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html</a></p>
+    </ol>
+
+</section>

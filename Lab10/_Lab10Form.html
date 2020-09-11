@@ -1,0 +1,24 @@
+<section id="Creador">
+    <h2>Creador de Identidades para Agentes de la CIA</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Nombre: <input type="text" name="Nombre" value="<?php echo $Nombre;?>">
+        <span class="error">* <?php echo $ErrorNombre;?></span>
+        <br><br>
+        Correo: <input type="text" name="Correo" value="<?php echo $Correo;?>">
+        <span class="error">* <?php echo $ErrorCorreo;?></span>
+        <br><br>
+        Sitio-Web: <input type="text" name="Sitio_Web" value="<?php echo $Sitio_Web;?>">
+        <span class="error"><?php echo $ErrorSitio;?></span>
+        <br><br>
+        Commentarios: <textarea name="Comentario" rows="5" cols="40"><?php echo $Comentario;?></textarea>
+        <br><br>
+        Género:
+            <input type="radio" name="Genero" <?php if (isset($Genero) && $Genero=="Femenino") echo "checked";?> value="Femenino">Femenino
+            <input type="radio" name="Genero" <?php if (isset($Genero) && $Genero=="Masculino") echo "checked";?> value="Masculino">Masculino
+            <input type="radio" name="Genero" <?php if (isset($Genero) && $Genero=="Otro") echo "checked";?> value="Otro">Otro  
+        <span class="error">* <?php echo $ErrorGenero;?></span>
+        <br><br>
+        <input type="submit" name="Introducir" value="Aceptar">
+        <p><span class="error">* Campos Requeridos</span></p>
+    </form>
+</section>
