@@ -1,0 +1,58 @@
+EJERCICIO - 2	
+
+	Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe?
+Se repiten las Claves de los elementos con Clave 1000. Esto es malo ya que si vamos a usar Clave como llave, debería de ser un dato único
+
+	¿Qué ocurrió?
+Salió el siguiente mensaje:
+Msg 2627, Level 14, State 1, Line 83
+Violation of PRIMARY KEY constraint 'llaveMateriales'. Cannot insert duplicate key in object 'a1275595.Materiales'. The duplicate key value is (1000).
+The statement has been terminated.
+
+Completion time: 2020-09-24T15:57:55.0988137-05:00
+
+	¿Qué información muestra esta consulta?
+2 Tablas, una con Object Name con 1 renglón que dice materiales y otra con constraint_type PRIMARY_KEY (clustered)
+
+	¿Qué sentencias utilizaste para definir las llaves primarias?
+ALTER TABLE Proveedores ADD CONSTRAINT llaveProveedores PRIMARY KEY (RFC);
+ALTER TABLE Proyectos ADD CONSTRAINT llaveProyectos PRIMARY KEY (Numero);
+
+	¿Qué sentencias utilizaste para definir este constrait?
+ALTER TABLE Entregan ADD CONSTRAINT llaveEntregan PRIMARY KEY (Clave, RFC, Numero, Fecha);
+
+EJERCICIO - 3
+	¿Qué particularidad observas en los valores para clave, rfc y numero?
+No se encuentran en ninguan otra tabla anteriormente creada
+
+	¿Cómo responde el sistema a la inserción de este registro?
+Hace el registro
+
+	¿Qué significa el mensaje que emite el sistema?
+Que ocurre un conflicto con la tabla Materiales ya que no hay ninguna clave con 0 existente aún
+
+	¿Qué significado tiene la sentencia anterior?
+Le agregamos una clave foranea a la tabla de Entregan que hace referencia a la tabla Materiales, haciendo que sus registros coincidan
+
+	¿Qué significan las columnas de esas consultas?
+Que se han registrado llaves foraneas que referencian a sus tablas padre u origen
+
+EJERCICIO - 4
+	¿Qué uso se le está dando a GETDATE()?
+Obtiene la fecha y hora actuales
+	¿Tiene sentido el valor del campo de cantidad?
+Si, no se hicieron restricciones al respecto
+
+	¿Cómo responde el sistema?
+Con el siguiente mensaje:
+Msg 547, Level 16, State 0, Line 111
+The INSERT statement conflicted with the CHECK constraint "Cantidad". The conflict occurred in database "a1275595", table "a1275595.Entregan", column 'Cantidad'.
+The statement has been terminated.
+
+Completion time: 2020-09-24T17:46:29.9762831-05:00
+
+	¿Qué significa el mensaje?
+Que al ponerse una cantidad menor o igual que 0, no se añadieron los datos.
+
+INTEGRIDAD REFERENCIAL
+Es una propiedad de las DB en las cuales se define que cualquier clave foranea debe de hacer referencia a un dato valido dentro de la tabla  ala cual se le hace referencia.
