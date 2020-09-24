@@ -1,0 +1,41 @@
+	Al finalizar la creación de las tablas aparecio el siguiente mensaje:
+Commands completed successfully.
+Completion time: 2020-09-23T12:32:01.8863275-05:00
+
+	Ejecuta la siguiente instrucción: sp_help materiales 
+	¿Que muestra la instrucción?
+Muestra dos menus, uno de Resultados y el otro de Mensajes
+El de Resultados muestra nombre de la tabla, su propietario, el tipo, fecha de creación, detalles de las columnas, Identidad, etc.
+En Mensajes muestra: 
+The object 'materiales' does not have any indexes, or you do not have permissions. 
+No constraints are defined on object 'materiales', or you do not have permissions.
+No foreign keys reference table 'materiales', or you do not have permissions on referencing tables.
+No views with schema binding reference table 'materiales'.
+Completion time: 2020-09-23T12:40:19.6803289-05:00
+
+	Eliminación de tablas creadas con: DROP TABLE Materiales, Proovedores, Proyectos, Entregan
+	Verifica que ya no existen las tablas que creaste, consultando las tablas existentes con: select * from sysobjects where xtype='U'
+No dio nada de resultado
+
+	Ejecuta las instrucciones que contiene el archivo crear.sql
+	¿Qué efecto tuvo esta acción?
+Salio el siguiente mensaje: 
+Commands completed successfully.
+Completion time: 2020-09-23T17:43:13.3386349-05:00
+Las tablas se crearon directamente en System Tables sin la necesidad de actualizar toda mi base de datos
+
+	¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+El poder insertar las tablas directamente sin necesidad de actualizar la Base de Datos.
+Almacena el SQL utilizado hasta el momento.
+
+	Carga masiva de Datos
+	¿Qué relación tienen con las tablas de la base de datos? (checa su contenido)
+Contienen el mismo numero de columnas que las tablas que cree, además de que los valores en ellos pueden ser guardados dentro de las tablas ya creadas.
+
+	¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+Se indica como y de que manera se van a subir la información a insertarse en la tabla materiales
+
+	¿Qué sucedió?
+Me aparecio un mensaje de éxito y se mostró mi tabla de Materiales ya con datos en ella.
+
+	
