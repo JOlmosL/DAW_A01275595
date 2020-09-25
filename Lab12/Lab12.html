@@ -1,0 +1,11 @@
+<section id="Foto">
+    <h2>Cargar imagen</h2><br>
+    <form action="Lab12.php" method="post" enctype="multipart/form-data">
+        Seleccionar imagen a subir:
+        <input type="file" name="Imagen" id="Imagen">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+    <?php if (isset($_SESSION["imagen"])): ?>
+    <img src="<?=$_SESSION["imagen"]?>" alt="La imagen fue cargada">
+    <?php endif ?>
+</section>

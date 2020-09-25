@@ -1,0 +1,40 @@
+<section id="Preguntas">
+    <h2>Preguntas a Responder</h2>
+    <ol>
+        <p><b>¿Por qué es importante hacer un session_unset() y luego un session_destroy()? - </b>Porque el <i>session_unset()</i> se utiliza para eliminar todos los pares de nombre / valor de sesión de los datos de sesión, manteniendo la cookie de sesión de ID de sesión y al utilizar <i>session_destroy()</i> se eliminaran todos los pares de nombre / valor de sesión asociados con la sesión, así como el valor de ID de sesión asignado a la cookie de sesión del navegador del cliente. [1]</p>
+        <p><b>¿Cuál es la diferencia entre una variable de sesión y una cookie?</b>
+            <table>
+                <tr>
+                    <td><b>Variable de sesión</b></td>
+                    <td>Sirven para controlar el acceso a una página web de una zona privada</td>
+                </tr>
+                <tr>
+                    <td><b>Cookies</b></td>
+                    <td>Es un fragmento de información que un navegador web almacena en el disco duro del visitante a una página web [2]</td>
+                </tr>
+            </table>
+        </p>
+        <p><b>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</b>Se hace una revisión de las variables de sesión y en caso de que ya existan con el mismo nombre, se le notifica al usuario.</p>
+        <p><b>¿Qué es CSRF y cómo puede prevenirse?</b>En inglés, <q>Cross-Site Request Forgery</q> es un ataque que fuerza a un end-user a ejecutar acciones no deseadas en una aplicación web en la cual estan actualmente autenticados [3]. Entre las acciones que podemos hacer para prevenirlas, recomiendo:
+            <ol>
+                <li>Checar que el framework haya sido construido con protección CSRF.</li>
+                <li>Siempre usar SameSite Cookie Atribute para cookies de sesión.</li>
+                <li>Implementar una forma de mitigación.</li>
+                <li>Considerar la implementación de protección basada en la interacción del usuario para operaciones altamente sensibles.</li>
+                <li>XSS puede usarse derrotar cualquier tecnica de mitigación CSRF. [4]</li>
+            </ol>
+        </p>
+        
+    </ol>
+</section>
+
+<section id="Bibliografia">
+    <h2>Bibliografía</h2>
+    <ol>
+        <p><b>[1] - </b><a href="https://www.um.es/docencia/barzana/DAWEB/2017-18/daweb-tema-17-sesiones-PHP.html">https://www.um.es/docencia/barzana/DAWEB/2017-18/daweb-tema-17-sesiones-PHP.html</a></p>
+        <p><b>[2] - </b><a href="http://idesweb.es/proyecto/proyecto-prac09-php-cookies-sesiones">http://idesweb.es/proyecto/proyecto-prac09-php-cookies-sesiones</a></p>
+        <p><b>[3] - </b><a href="https://owasp.org/www-community/attacks/csrf">https://owasp.org/www-community/attacks/csrf</a></p>
+        <p><b>[4] - </b><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</a></p>
+    </ol>
+
+</section>
