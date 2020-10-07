@@ -5,7 +5,7 @@ function conectDB()
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "dbname";
+    $dbname = "concesionario";
 
     $con = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -29,37 +29,32 @@ function closeDB($mysql)
     mysqli_close($mysql);
 }
 
-function getFruits()
+function verClientes()
 {
     $conn = conectDB();
-    $sql = "SELECT name, units, quantity, price, country FROM Fruit";
+    $sql = "SELECT idCliente, nombreCliente, apellidosCliente, direccionCliente, poblacion, codigoPostal, telefono, fechaNac FROM CLIENTE";
     $result = mysqli_query($conn, $sql);
     closeDB($conn);
     return $result;
 }
 
 /*
-function que regresará los datos de una fruta que tengan en su nombre el parámetro
-Ejemplo: si pongo manzana, me puede regresar manzana roja, manzana washington, etc
+function que regresará los datos de un CLiente dependiendo de un patrón
 */
 
-function getFruitsByName($fruit_name)
+function searchClienteApe($patron)
 {
     $conn = conectDB();
-    $sql = "SELECT name, units, quantity, price, country, FROM fruit WHERE name LIKE '%".$fruit_name."%'";
+    $sql = "SELECT idCliente, nombreCliente, apellidosCliente, direccionCliente, poblacion, codigoPostal, telefono, fechaNac FROM CLIENTE WHERE apellidosCliente LIKE '%".$patron."%'";
     $result = mysqli_query($conn, $sql);
     closeDB($conn);
     return $result;
 }
 
-/*
-Regresa todas las frutas donde su precio sea igula o menos que el parametro que recibe
-*/
-
-function getCheapestFruits($fruit_name)
+function clienteTelefono($tel)
 {
     $conn = conectDB();
-    $sql = "SELECT name, units, quantity, price, country, FROM fruit WHERE price <= '".$cheap_price."'";
+    $sql = "SELECT idCliente, nombreCliente, apellidosCliente, direccionCliente, poblacion, codigoPostal, telefono, fechaNac FROM CLIENTE WHERE telefono LIKE '%".$patron."%'";
     $result = mysqli_query($conn, $sql);
     closeDB($conn);
     return $result;
