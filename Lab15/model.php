@@ -118,7 +118,7 @@ function tablaClientes()
     return $resultado;
 }
 
-function updateTemplate($matricula, $nuevoColor = 'Negro') 
+function updateColorAuto($matricula, $nuevoColor = 'Negro') 
 {
      
     $conexion_bd = conectar();
@@ -146,6 +146,62 @@ function updateTemplate($matricula, $nuevoColor = 'Negro')
     
     desconectar($conexion_bd);
 }
-//updateTemplate('V8018LJ', 'Verde');
+//updateColorAuto('V8018LJ', 'Verde');
 //echo tablaCocheVenta();
+
+function InsertNuevoCliente($idCliente, $nombreCliente, $apellidosCliente, $direccionCliente, $poblacion, $codigoPostal, $telefono, $fechaNac) 
+{
+     
+    $conexion_bd = conectar();
+    
+    $consulta = "INSERT INTO CLIENTES VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    //Parametros son los signos de interrogación
+
+    //Verifica que la consulta sea correcta
+    if(!($statement = $conexion_bd->prepare($consulta))) 
+    {
+        die("Error(".$conexion_bd->errno."): ".$conexion_bd->error);
+    }
+    
+    //Evita +- SQL inyection | Hace la union entre los parametros con las cosultas/Sustituye ?s por datos
+    if(!($statement->bind_param("ssssssss", $idCliente, $nombreCliente, $apellidosCliente, $direccionCliente, $poblacion, $codigoPostal, $telefono, $fechaNac))) 
+    {
+        die("Error de vinculación(".$statement->errno."): ".$statement->error);
+    }
+    
+    if(!$statement->execute()) 
+    {
+        die("Error en ejecución de la consulta(".$statement->errno."): ".$statement->error);
+    }
+    
+    desconectar($conexion_bd);
+}
+
+function deleteAuto($matricula) 
+{
+     
+    $conexion_bd = conectar();
+    
+    $consulta = "DELETE FROM coche_vendido WHERE matricula = ?";
+    //Parametros son los signos de interrogación
+
+    //Verifica que la consulta sea correcta
+    if(!($statement = $conexion_bd->prepare($consulta))) 
+    {
+        die("Error(".$conexion_bd->errno."): ".$conexion_bd->error);
+    }
+    
+    //Evita +- SQL inyection | Hace la union entre los parametros con las cosultas/Sustituye ?s por datos
+    if(!($statement->bind_param("s", $matricula))) 
+    {
+        die("Error de vinculación(".$statement->errno."): ".$statement->error);
+    }
+    
+    if(!$statement->execute()) 
+    {
+        die("Error en ejecución de la consulta(".$statement->errno."): ".$statement->error);
+    }
+    
+    desconectar($conexion_bd);
+}
 ?>
